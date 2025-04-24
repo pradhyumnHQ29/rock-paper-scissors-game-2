@@ -1,0 +1,142 @@
+/* Base styles for all devices */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: rgb(200, 255, 237);
+    overflow: hidden; /* Prevent scrolling */
+}
+
+/* Flex container to center everything */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Title */
+h1 {
+    background-color: #081c24;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin: 0;
+    width: 100%;
+    font-size: 2rem;
+}
+
+/* Game area using vertical layout */
+.main-container {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Choices */
+.choices {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6rem;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+}
+
+.choice {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    padding: 10px;
+    transition: transform 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.choice:hover {
+    cursor: pointer;
+    background-color: #081c24;
+}
+
+.choice:active {
+    transform: scale(0.9);
+}
+
+img {
+    height: 170px;
+    width: 170px;
+    object-fit: cover;
+    border-radius: 50%;
+   
+}
+
+/* Scoreboard */
+.score-board {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    font-size: 2rem;
+}
+
+#user-score,
+#comp-score {
+    font-size: 3rem;
+}
+
+/* Message box */
+.msg-container {
+    margin: 1rem 0;
+}
+
+#msg {
+    background-color: #081c24;
+    color: aliceblue;
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    width: auto;
+}
+
+#mute-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #5ba0bc;
+    color: white;
+    font-size: 1.2rem;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover and active effects */
+#mute-button:hover {
+    background-color: #223a48;
+    transform: translateY(-2px);
+}
+
+#mute-button:active {
+    transform: scale(0.95);
+}
+
+/* Responsive: slightly smaller on mobile */
+@media only screen and (max-width: 768px) {
+    #mute-button {
+        font-size: 1rem;
+        padding: 8px 12px;
+        top: 15px;
+        right: 15px;
+    }
+}
+
